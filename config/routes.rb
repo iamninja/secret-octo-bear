@@ -8,7 +8,7 @@ MarketPlaceApi::Application.routes.draw do
                   path: '/' do
     scope module: :v1, constraints: ApiConstraints.new(version: 1, default: true) do
       # List resources here
-      resources :users, :only => [:show]
+      resources :users, :only => [:show, :create]
     end
   end
 end
